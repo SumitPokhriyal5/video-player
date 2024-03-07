@@ -9,6 +9,10 @@ export default {
       colors: {
         customBlue: '#04152d',
       },
+      width: {
+        thirtyPercent: "30%",
+        seventyPercent: "70%"
+      }
     },
   },
   plugins: [],

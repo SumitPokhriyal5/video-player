@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { getAllVideosApi } from "../store/videos.api";
 import VideoCard from "../components/VideoCard";
 import HomeLoadingSkeleton from "../components/HomeLoadingSkeleton";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch<ThunkDispatch<any, null, AnyAction>>();
@@ -34,18 +35,18 @@ const Home = () => {
   console.log("data:", data);
   if (loading)
     return (
-      <div className="grid grid-cols-3 gap-10 items-center justify-center w-11/12 m-auto">
-        {[0,1,2,3,4,5].map((el) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">
+        {[0,1,2,3,4,5,6,7,8,9].map((el) => (
           <HomeLoadingSkeleton key={el} />
         ))}
       </div>
     );
   return (
     <div className="">
-      <div className="grid grid-cols-3 gap-10 items-center justify-center w-11/12 m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">
         {data?.posts?.map((video) => (
+          <Link to={`/details/${video.postId}/${currentPage}`} key={video.postId}>
           <VideoCard
-            key={video.postId}
             thumbnail={video.submission.thumbnail}
             title={video.submission.title}
             userAvatar={video.creator.pic}
@@ -54,6 +55,7 @@ const Home = () => {
             likeCount={video.reaction.count}
             commentCount={video.comment.count}
           />
+          </Link>
         ))}
       </div>
       <div className="flex justify-center mt-5 gap-2">

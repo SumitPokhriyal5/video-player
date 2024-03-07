@@ -5,7 +5,7 @@ import { RootState } from "../store/store";
 import { useEffect, useState } from "react";
 import { getAllVideosApi } from "../store/videos.api";
 import VideoCard from "../components/VideoCard";
-import VideoGridSkeleton from "../components/VideoGridSkeleton";
+import HomeLoadingSkeleton from "../components/HomeLoadingSkeleton";
 
 const Home = () => {
   const dispatch = useDispatch<ThunkDispatch<any, null, AnyAction>>();
@@ -36,12 +36,12 @@ const Home = () => {
     return (
       <div className="grid grid-cols-3 gap-10 items-center justify-center w-11/12 m-auto">
         {[0,1,2,3,4,5].map((el) => (
-          <VideoGridSkeleton key={el} />
+          <HomeLoadingSkeleton key={el} />
         ))}
       </div>
     );
   return (
-    <div>
+    <div className="">
       <div className="grid grid-cols-3 gap-10 items-center justify-center w-11/12 m-auto">
         {data?.posts?.map((video) => (
           <VideoCard

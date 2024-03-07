@@ -1,4 +1,4 @@
-const VideoGridSkeleton = () => {
+const HomeLoadingSkeleton = () => {
   return (
     <div
       role="status"
@@ -40,4 +40,4 @@ const VideoGridSkeleton = () => {
   );
 };
 
-export default VideoGridSkeleton;
+export default HomeLoadingSkeleton;

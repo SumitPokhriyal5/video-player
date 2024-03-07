@@ -32,7 +32,7 @@ const Home = () => {
     }
   };
 
-  console.log("data:", data);
+  // console.log("data:", data);
   if (loading)
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">

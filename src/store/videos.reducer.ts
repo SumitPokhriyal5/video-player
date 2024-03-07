@@ -32,7 +32,7 @@ export const videosReducer : Reducer<VideoState> = (
     }
 
     case VIDEOS_SUCCESS: {
-      return { data: payload, loading: false, error: false };
+      return { data: payload as IVideoData, loading: false, error: false };
     }
 
     

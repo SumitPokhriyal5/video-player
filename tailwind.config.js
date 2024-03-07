@@ -15,6 +15,9 @@ export default {
       },
       height: {
         eightyView: "80vh"
+      },
+      backgroundColor: {
+        customBlack: "#020c1b"
       }
     },
   },

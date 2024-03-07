@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "redux";
 import { getAllVideosApi } from "../store/videos.api";
+import DetailsLoadingSkeleton from "../components/DetailsLoadingSkeleton";
 
 const Details = () => {
   const { id, page } = useParams<{ id: string, page: string }>(); 
@@ -21,10 +22,8 @@ const Details = () => {
     dispatch(getAllVideosApi(`page=${page}`));
   }, [page, dispatch]);
   console.log(data)
-  // If video is not found, display a message
-  if (!video) {
-    return <div>Video not found</div>;
-  }
+  if(loading || !video)return <DetailsLoadingSkeleton />
+
 
   return (
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-center w-11/12 m-auto gap-4 mb-8">

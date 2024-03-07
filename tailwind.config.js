@@ -12,6 +12,9 @@ export default {
       width: {
         thirtyPercent: "30%",
         seventyPercent: "70%"
+      },
+      height: {
+        eightyView: "80vh"
       }
     },
   },

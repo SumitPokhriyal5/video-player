@@ -35,7 +35,7 @@ const Home = () => {
   console.log("data:", data);
   if (loading)
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">
         {[0,1,2,3,4,5,6,7,8,9].map((el) => (
           <HomeLoadingSkeleton key={el} />
         ))}
@@ -43,7 +43,7 @@ const Home = () => {
     );
   return (
     <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 items-center justify-center w-11/12 m-auto">
         {data?.posts?.map((video) => (
           <Link to={`/details/${video.postId}/${currentPage}`} key={video.postId}>
           <VideoCard

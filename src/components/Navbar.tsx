@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from '../../public/video-player-logo.png'
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
         <div className="flex items-center gap-1">
           <img
             className="w-8"
-            src="./video-player-logo.png"
+            src={logo}
             alt="video player logo"
           />
           <span className="text-2xl text-white font-bold">Video Player</span>

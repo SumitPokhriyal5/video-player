@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Video Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objective
+The goal of this project is to build a functional web application using React.js to demonstrate proficiency in fundamental web development concepts, Typescript, and creating a user-friendly UI/UX. The application is a simplified Video Player that allows users to view a list of predefined video thumbnails, click on a thumbnail to play the video, and see basic information about the video such as title and description.
 
-Currently, two official plugins are available:
+## Features
+- View a list of predefined video thumbnails.
+- Click on a thumbnail to play the video.
+- See basic information about the video such as title and description.
+- Pagination for fetching videos using API.
+- State management to handle video list and currently selected/playing video.
+- Ability to maintain like, dislike count, and comments.
+- Responsive design for various screen sizes and devices.
+- Responsive Skeleton loading for every page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React JS
+- Typescript
+- Tailwind CSS
+- Redux (for state management)
+- HTML5 Video Player for video playback
+- Modular / Atomic components for code organization
 
-## Expanding the ESLint configuration
+## Dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) - ^2.2.1
+- [react](https://www.npmjs.com/package/react) - ^18.2.0
+- [react-dom](https://www.npmjs.com/package/react-dom) - ^18.2.0
+- [react-icons](https://www.npmjs.com/package/react-icons) - ^5.0.1
+- [react-redux](https://www.npmjs.com/package/react-redux) - ^9.1.0
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) - ^6.22.2
+- [react-toastify](https://www.npmjs.com/package/react-toastify) - ^10.0.4
+- [redux](https://www.npmjs.com/package/redux) - ^5.0.1
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk) - ^3.1.0
 
-- Configure the top-level `parserOptions` property like this:
+## Dev Dependencies
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [@types/react](https://www.npmjs.com/package/@types/react) - ^18.2.56
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom) - ^18.2.19
+- [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) - ^7.0.2
+- [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser) - ^7.0.2
+- [@vitejs/plugin-react](https://www.npmjs.com/package/@vitejs/plugin-react) - ^4.2.1
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer) - ^10.4.18
+- [eslint](https://www.npmjs.com/package/eslint) - ^8.56.0
+- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) - ^4.6.0
+- [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh) - ^0.4.5
+- [postcss](https://www.npmjs.com/package/postcss) - ^8.4.35
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss) - ^3.4.1
+- [typescript](https://www.npmjs.com/package/typescript) - ^5.2.2
+- [vite](https://www.npmjs.com/package/vite) - ^5.1.4
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Setup Instructions
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server using `npm run dev`.
+4. Open the application in your web browser.
+
+## Screenshots
+### Home Page
+![home](https://github.com/SumitPokhriyal5/react-three-fiber/assets/112632728/65abcdf8-789d-4fa2-adce-b555d0026f94)
+![pagination](https://github.com/SumitPokhriyal5/react-three-fiber/assets/112632728/84183a3b-fefc-4a52-949d-dd54276ae514)
+![home-loading-skeleton](https://github.com/SumitPokhriyal5/react-three-fiber/assets/112632728/73b1e55f-278a-408c-b5f4-8e4ad2e596e8)
+
+### Details Page
+![details](https://github.com/SumitPokhriyal5/react-three-fiber/assets/112632728/b17a48b2-b97a-4d3b-9646-7643698184a9)
+![comments](https://github.com/SumitPokhriyal5/react-three-fiber/assets/112632728/30ba0f35-b272-4b2d-b1cb-12c66fe24b77)
+![details-loading-skeleton](https://github.com/SumitPokhriyal5/react-three-fiber/assets/112632728/c7f740bf-3e82-4e66-bf10-e88df512da2d)
+
+
+
+
